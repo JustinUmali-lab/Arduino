@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arduino Board Design</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .board-container {
+            width: 90%;
+            max-width: 800px;
+            background: #2d2d2d;
+            border: 3px solid #007acc;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            text-align: center;
+            color: #00d7ff;
+            font-size: 2rem;
+        }
+
+        h3 {
+            color: #00d7ff;
+            margin-top: 20px;
+        }
+
+        p, ul {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        img {
+            display: block;
+            margin: 20px auto;
+            width: 80%;
+            border: 2px solid #007acc;
+            border-radius: 10px;
+        }
+
+        .pin-section {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .pin-section div {
+            background: #333;
+            padding: 10px;
+            border: 2px solid #007acc;
+            border-radius: 10px;
+        }
+
+        .pin-section div h4 {
+            color: #00d7ff;
+            margin: 0;
+            font-size: 1.1rem;
+        }
+
+        .pin-section div p {
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="board-container">
+        <h1>Arduino Hardware Overview</h1>
+        <p>Explore the essential components of an Arduino UNO board. Below, you'll find detailed descriptions of the key parts and their functions.</p>
+
+        <img src="image.png" alt="Arduino UNO Board">
+
+        <h3>Arduino UNO Layout</h3>
+        <p>Here is a breakdown of the Arduino UNO layout and the purpose of its pins and features:</p>
+        
+        <div class="pin-section">
+            <div>
+                <h4>Analog Reference</h4>
+                <p>Used for external reference voltage for analog inputs.</p>
+            </div>
+            <div>
+                <h4>Digital Ground</h4>
+                <p>Provides a ground connection for digital circuits.</p>
+            </div>
+            <div>
+                <h4>Digital Pins</h4>
+                <p>Used for general input/output, PWM, or serial communication.</p>
+            </div>
+            <div>
+                <h4>Power Pins</h4>
+                <p>Provide power supply options for external components.</p>
+            </div>
+            <div>
+                <h4>Reset Button</h4>
+                <p>Resets the microcontroller.</p>
+            </div>
+            <div>
+                <h4>USB Port</h4>
+                <p>Used for programming and powering the board.</p>
+            </div>
+        </div>
+
+        <h3>Microcontroller Specifications</h3>
+        <ul>
+            <li><strong>Microcontroller:</strong> ATmega328P</li>
+            <li><strong>Digital I/O Pins:</strong> 14 (6 PWM)</li>
+            <li><strong>Analog Input Pins:</strong> 6</li>
+            <li><strong>Flash Memory:</strong> 32 KB</li>
+            <li><strong>SRAM:</strong> 2 KB</li>
+            <li><strong>EEPROM:</strong> 1 KB</li>
+        </ul>
+
+        <h3>Important Notes</h3>
+        <ul>
+            <li>Use <code>pinMode()</code>, <code>digitalWrite()</code>, and <code>digitalRead()</code> for digital pins.</li>
+            <li>For PWM output, use <code>analogWrite()</code> on supported pins.</li>
+            <li>Avoid exceeding 40 mA per pin to prevent damage.</li>
+        </ul>
+
+        <footer>Arduino UNO Hardware Guide - 2024</footer>
+    </div>
+</body>
+</html>

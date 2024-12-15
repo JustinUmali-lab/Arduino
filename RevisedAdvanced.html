@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Arduino Guide</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            color: #e5e5e5;
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1f3c73, #3a74b2);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        header p {
+            font-size: 1.4rem;
+            margin-top: 10px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #232323;
+            padding: 12px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        nav a {
+            color: #d4d4d4;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            padding: 12px 18px;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            transition: background 0.3s ease;
+        }
+
+        nav a:hover {
+            background: #3a74b2;
+            color: white;
+        }
+
+        main {
+            padding: 30px;
+            max-width: 1200px;
+            margin: 20px auto;
+            background: #2b2b2b;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+        }
+
+        main h2 {
+            color: #1f3c73;
+            border-bottom: 3px solid #3a74b2;
+            padding-bottom: 5px;
+            margin-bottom: 25px;
+            font-size: 2rem;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        ul {
+            list-style: disc;
+            margin: 10px 0 20px 20px;
+            padding-left: 0;
+        }
+
+        ul li {
+            margin-bottom: 12px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 10px;
+            background-color: #1f3c73;
+            color: white;
+            margin-top: 30px;
+            font-size: 1.2rem;
+        }
+
+        .tutorials {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .tutorial-card {
+            flex: 1;
+            min-width: 280px;
+            max-width: 320px;
+            background: #333;
+            border: 1px solid #444;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .tutorial-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+        }
+
+        .tutorial-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .tutorial-card h3 {
+            padding: 20px;
+            font-size: 1.4rem;
+            background: #1f3c73;
+            color: white;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .tutorial-card p {
+            padding: 15px;
+            color: #d4d4d4;
+        }
+
+        .tutorial-card a {
+            display: block;
+            padding: 12px;
+            text-align: center;
+            color: white;
+            background: #3a74b2;
+            text-decoration: none;
+            border-radius: 0 0 12px 12px;
+            transition: background 0.3s ease;
+        }
+
+        .tutorial-card a:hover {
+            background: #1f3c73;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+
+            nav a {
+                margin: 8px 0;
+            }
+
+            .tutorials {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Advanced Arduino Guide</h1>
+        <p>Your one-stop resource for advanced Arduino components, software, and tutorials</p>
+    </header>
+
+    <nav>
+        <a href="#components">Components</a>
+        <a href="#software">Software</a>
+        <a href="#tutorials">Tutorials</a>
+        <a href="#projects">Projects</a>
+    </nav>
+
+    <main>
+        <section id="components">
+            <h2>Arduino Components</h2>
+            <p>Dive deep into advanced Arduino components that expand your project capabilities:</p>
+            <ul>
+                <li>Sensors: Ultrasonic, infrared, LIDAR, and biometric sensors.</li>
+                <li>Actuators: DC, servo, and stepper motors for precision movement.</li>
+                <li>Displays: OLEDs, TFT LCDs, and ePaper screens.</li>
+                <li>Connectivity: Wi-Fi modules, Bluetooth shields, and GSM modules.</li>
+                <li>Power Systems: Battery packs, solar panels, and voltage regulators.</li>
+            </ul>
+        </section>
+
+        <section id="software">
+            <h2>Arduino Software</h2>
+            <p>Learn about essential software tools and libraries for advanced Arduino development:</p>
+            <ul>
+                <li>Arduino IDE: Official development environment for Arduino boards.</li>
+                <li>PlatformIO: Advanced IDE with features like library management and debugging.</li>
+                <li>Libraries: FastLED for LED control, AccelStepper for stepper motors, and Blynk for IoT applications.</li>
+                <li>Simulators: Tools like Tinkercad and Fritzing for circuit design and simulation.</li>
+            </ul>
+        </section>
+
+        <section id="tutorials">
+            <h2>Tutorials</h2>
+            <p>Explore hands-on tutorials for advanced Arduino applications:</p>
+
+            <h3>1. IoT Weather Station</h3>
+            <p>In this tutorial, you will build a weather station using sensors and Wi-Fi modules to monitor temperature, humidity, and other weather-related parameters. This project will help you understand how to interface sensors with Arduino and use the Wi-Fi module to send data to the cloud or a local server.</p>
+            <img src="iot_weather_station.jpg" alt="IoT Weather Station" style="max-width: 100%; height: auto; margin-bottom: 15px;">
+            <h4>Materials Needed:</h4>
+            <ul>
+                <li>Arduino Uno or any other compatible board</li>
+                <li>DHT22 Temperature and Humidity Sensor</li>
+                <li>ESP8266 Wi-Fi Module</li>
+                <li>Jumper wires</li>
+                <li>Power supply</li>
+            </ul>
+            <h4>Steps:</h4>
+            <ol>
+                <li>Set up the Arduino IDE and install necessary libraries for DHT22 and ESP8266.</li>
+                <li>Connect the DHT22 sensor to the Arduino board, following the wiring diagram.</li>
+                <li>Upload the code to the Arduino, ensuring it reads data from the sensor and sends it over Wi-Fi to a server or cloud platform.</li>
+                <li>Test the setup and ensure the data is transmitted correctly.</li>
+            </ol>
+            <p>Once you've completed this project, you'll have a fully functional IoT weather station.</p>
+
+            <h3>2. Smart Home Automation</h3>
+            <p>In this tutorial, we'll guide you through creating a home automation system using Arduino and IoT technology. Control lights, fans, and other appliances from anywhere using a mobile app.</p>
+            <img src="smart_home.jpg" alt="Smart Home Automation" style="max-width: 100%; height: auto; margin-bottom: 15px;">
+            <h4>Materials Needed:</h4>
+            <ul>
+                <li>Arduino Uno or any other compatible board</li>
+                <li>Relay modules</li>
+                <li>Wi-Fi or Bluetooth module (ESP8266, HC-05)</li>
+                <li>Jumper wires</li>
+                <li>Smartphone with IoT app (Blynk, for example)</li>
+            </ul>
+            <h4>Steps:</h4>
+            <ol>
+                <li>Set up the Arduino with the relay module and connect it to the desired appliances.</li>
+                <li>Use the Blynk app or any other mobile app to interface with your Arduino board.</li>
+                <li>Upload the code to the Arduino, configuring the app's virtual pins for controlling appliances.</li>
+                <li>Test the setup and control appliances remotely using your smartphone.</li>
+            </ol>
+
+            <h3>3. Autonomous Robot</h3>
+            <p>Build a self-driving robot that uses ultrasonic sensors to detect obstacles and navigate around them. This is a great way to dive into robotics with Arduino.</p>
+            <img src="robotics.jpg" alt="Autonomous Robot" style="max-width: 100%; height: auto; margin-bottom: 15px;">
+            <h4>Materials Needed:</h4>
+            <ul>
+                <li>Arduino Uno or any other compatible board</li>
+                <li>Ultrasonic sensors</li>
+                <li>DC motors and motor driver module</li>
+                <li>Chassis and wheels</li>
+                <li>Jumper wires</li>
+            </ul>
+            <h4>Steps:</h4>
+            <ol>
+                <li>Assemble the robot chassis and connect the DC motors to the motor driver module.</li>
+                <li>Connect the ultrasonic sensor to the Arduino to detect obstacles.</li>
+                <li>Write the code to make the robot move forward until it detects an obstacle, then make it turn and continue.</li>
+                <li>Test the robot and fine-tune the movement logic as necessary.</li>
+            </ol>
+
+        </section>
+
+        <section id="projects">
+            <h2>Advanced Projects</h2>
+            <p>Take your Arduino skills to the next level with these projects:</p>
+            <ul>
+                <li>AI-Powered Robot: Combine Arduino with AI tools for intelligent automation.</li>
+                <li>Custom PCB Design: Use KiCAD to design custom boards for your Arduino projects.</li>
+                <li>Quadcopter: Build a drone with Arduino and accelerometer modules.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Advanced Arduino Guide. All rights reserved.</p>
+    </footer>
+</body>
+</html>

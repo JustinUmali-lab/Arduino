@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beginner's Guide to Arduino</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: #e0e0e0;
+        }
+
+        /* Header Styling */
+        header {
+            background: linear-gradient(90deg, #00c6ff, #0072ff);
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: white;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Main Content Styling */
+        main {
+            max-width: 900px;
+            margin: 30px auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        main h3 {
+            font-size: 1.8rem;
+            color: #00c6ff;
+            text-shadow: 0 0 10px #00c6ff, 0 0 20px #0072ff;
+        }
+
+        main img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+            border: 2px solid #00c6ff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 198, 255, 0.5);
+        }
+
+        p, ul {
+            font-size: 1rem;
+            color: #e0e0e0;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            background: rgba(0, 198, 255, 0.2);
+            padding: 10px;
+            margin: 10px 0;
+            border-left: 5px solid #00c6ff;
+            border-radius: 5px;
+        }
+
+        a {
+            color: #00c6ff;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            color: #ffffff;
+            text-shadow: 0 0 10px #00c6ff, 0 0 20px #0072ff;
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #0072ff;
+            color: white;
+            margin-top: 20px;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.4);
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+            color: #ffffff;
+            text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Button Glow Animation */
+        a.button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background: linear-gradient(90deg, #00c6ff, #0072ff);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 0 20px rgba(0, 198, 255, 0.7);
+            text-align: center;
+            font-size: 1.2rem;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        a.button:hover {
+            background: linear-gradient(90deg, #0072ff, #00c6ff);
+            box-shadow: 0 0 30px rgba(0, 198, 255, 1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Basics of Arduino</h1>
+    </header>
+    <main>
+        <p>Welcome to the basics of Arduino. Before we start, let me introduce you to what Arduino is.</p>
+        <p>Arduino is an open-source electronics platform consisting of both hardware and software. It is designed to make electronics projects accessible to everyone. Arduino boards can read inputs, such as light on a sensor, a button press, or even a tweet, and turn them into outputs, like activating a motor, lighting up an LED, or posting something online.</p>
+        <p>The Arduino IDE (Integrated Development Environment) is the software used to write and upload code to the Arduino boards. This combination allows both beginners and professionals to create interactive projects easily. Arduino is popular due to its user-friendly approach and vast community support, offering countless tutorials and resources.</p>
+        <p>Now that you understand what Arduino is, let’s dive into the Arduino Software or Arduino IDE.</p>
+        <img src="Project.png" alt="Arduino IDE Screenshot">
+        <p>When you download and install the IDE, this is the first screen you will see when you open it.</p>
+        <p>The text includes two functions: <code>void setup() {}</code> and <code>void loop() {}</code>. Functions are essential for your program to run smoothly. Even a single typo can prevent your program from working as expected.</p>
+        <h3>The <code>void setup()</code> Function</h3>
+        <p>The <code>void setup()</code> function runs only once when the program starts. It acts as the program's starting point but does not execute again after the initial setup.</p>
+        <img src="Screenshot 2024-12-14 193200.png" alt="Arduino Setup Example">
+        <p>For example, the command <code>pinMode</code> in <code>void setup()</code> tells the program whether a pin is an OUTPUT or an INPUT.</p>
+        <h3>The <code>void loop()</code> Function</h3>
+        <p>The <code>void loop()</code> function repeats commands endlessly. This is where most of your program's logic will reside.</p>
+        <img src="Screenshot 2024-12-14 194215.png" alt="Arduino Loop Example">
+        <p>With these basics, you've just created a simple program to make an LED blink!</p>
+        <h3>What You Need to Get Started</h3>
+        <ul>
+            <li>Arduino IDE</li>
+            <li>Learning materials (books, guides, or tutorials)</li>
+        </ul>
+        <a href="https://www.arduino.cc/education" target="_blank" class="button">Visit Arduino Education</a>
+    </main>
+    <footer>
+        <p>&copy; 2024 Arduino Learning Hub. All rights reserved.</p>
+    </footer>
+</body>
+</html>
